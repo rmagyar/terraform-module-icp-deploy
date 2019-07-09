@@ -129,7 +129,6 @@ variable "icp_config_file" {
 
 variable "icp_configuration" {
   description = "Configuration items for ICP installation."
-  type        = "map"
   default     = {}
 }
 
@@ -141,7 +140,6 @@ variable "config_strategy" {
 
 variable "icp-host-groups" {
   description = "Map of host groups and IPs in the cluster. Needs at least master, proxy and worker"
-  type        = "map"
   default     = {}
 }
 
@@ -154,7 +152,6 @@ variable "boot-node" {
 
 variable "hooks" {
   description = "Hooks into different stages in the cluster setup process; each must be a list"
-  type        = "map"
   default     = {
     cluster-preconfig  = ["echo -n"]
     cluster-postconfig = ["echo -n"]
@@ -166,7 +163,6 @@ variable "hooks" {
 
 variable "local-hooks" {
   description = "Local hooks into different stages in the cluster setup process; each must be a single command"
-  type        = "map"
   default     = {
     local-preinstall   = "echo -n"
     local-postinstall  = "echo -n"
